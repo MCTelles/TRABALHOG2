@@ -1,0 +1,36 @@
+.paymentContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 375px;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 0 16px;
+
+  h1 {
+  }
+
+  .shippingAddress {
+    padding-top: 11px;
+    padding-right: 20px;
+    width: 100%;
+    max-width: 335px;
+    height: 70px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .contactInformation {
+    padding-top: 6px;
+    padding-right: 20px;
+    width: 100%;
+    max-width: 335px;
+    height: 70px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}

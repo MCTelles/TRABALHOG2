@@ -1,0 +1,158 @@
+.createAccountContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    margin-top: 122px;
+    padding: 54px;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+    gap: 8px;
+    padding: 32px;
+
+    .inputEmail {
+      width: 335px;
+      height: 52px;
+      padding-left: 19px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+      background: var(--grey-200);
+      border: none;
+      border-radius: 999px;
+      font-size: 13px;
+      color: var(--grey-900);
+      outline: none;
+      font-family: "Poppins", sans-serif;
+
+      &::placeholder {
+        opacity: 0.6;
+      }
+    }
+
+    .passwordContainer {
+      position: relative;
+      .inputPassword {
+        width: 335px;
+        height: 52px;
+        padding-left: 19px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+        background: var(--grey-200);
+        border: none;
+        border-radius: 999px;
+        font-size: 13px;
+        color: var(--grey-900);
+        outline: none;
+        font-family: "Poppins", sans-serif;
+
+        &::placeholder {
+          opacity: 0.6;
+        }
+      }
+      .eyeInput {
+        position: absolute;
+        right: 20px;
+        top: 14px;
+      }
+    }
+
+    .phoneInput {
+      display: flex;
+      align-items: center;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+      background-color: #f9f9f9;
+      border-radius: 999px;
+      padding: 0.6rem 1rem;
+      max-width: 354px;
+    }
+
+    .flag {
+      width: 40px;
+      height: 40px;
+      object-fit: cover;
+      border-radius: 2px;
+    }
+
+    .countryCode {
+      appearance: none; /* Remove a aparência padrão */
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background: url('data:image/svg+xml;utf8,<svg fill="%23000" height="10" width="10" viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg"><path d="M0 0l5 6 5-6z"/></svg>')
+        no-repeat right 10px center;
+      background-size: 10px;
+      padding-left: 10px;
+      padding-right: 25px; /* Espaço para a seta */
+      border: none;
+      outline: none;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .separator {
+      width: 1px;
+      height: 24px;
+      background-color: #000000;
+      margin: 5px;
+    }
+
+    .phoneField {
+      border: none;
+      outline: none;
+      background: transparent;
+      flex: 1;
+      font-size: 13px;
+      color: #333;
+      padding-left: 8px;
+
+      &::placeholder {
+        color: #999;
+        opacity: 0.6;
+      }
+    }
+  }
+
+  .buttonsContainer {
+    gap: 37px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "Nunito Sans", sans-serif;
+
+    .doneButton {
+      width: 335px;
+      height: 61px;
+      color: var(--grey-100);
+      background-color: var(--blue-500);
+      border-radius: 999px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      font-size: 22px;
+      font-weight: lighter;
+
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+      }
+    }
+
+    .cancelButton {
+      width: 295px;
+      height: 61px;
+      color: var(--grey-900);
+      background-color: var(--blue-100);
+      border-radius: 999px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      font-size: 18px;
+      font-weight: lighter;
+
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+      }
+    }
+  }
+}

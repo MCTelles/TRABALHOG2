@@ -1,0 +1,147 @@
+.cartContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 375px;
+  margin: 58px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  button:disabled {
+    cursor: not-allowed;
+  }
+
+  .cartLabel {
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+
+  .addressCard {
+    display: flex;
+    margin-top: 20px;
+    flex-direction: column;
+    margin: 10px 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+
+    .shippingLabel {
+      margin-top: 9px;
+      margin-left: 16px;
+      font-size: 14px;
+    }
+    .addressInfo {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      padding: 0 16px;
+      margin-top: 5px;
+      align-items: center;
+      margin-bottom: 5px;
+
+      p {
+        font-size: 10px;
+      }
+    }
+
+    .saveButton {
+      width: 100px;
+      height: 30px;
+      text-align: center;
+      border-radius: 11px;
+      background-color: var(--blue-500);
+      font-weight: lighter;
+      color: var(--grey-100);
+      margin-right: 10px;
+    }
+    .cancelButton {
+      width: 100px;
+      height: 30px;
+      text-align: center;
+      border-radius: 11px;
+      background-color: var(--grey-500);
+      font-weight: lighter;
+    }
+  }
+
+  .productsList {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .productItem {
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      width: 100%;
+
+      .productImage {
+        max-width: 121px;
+        width: 100%;
+        max-height: 101px;
+        height: 100%;
+        object-fit: cover;
+        border: 3px solid #ffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-right: 10px;
+      }
+
+      .productInfo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+
+        h2 {
+          font-size: 14px;
+        }
+
+        p {
+          font-size: 12px;
+          color: #666;
+          margin-bottom: 10px;
+        }
+      }
+
+      .controls {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+
+        span {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 6px;
+          font-size: 14px;
+          font-weight: bold;
+          background-color: var(--blue-100);
+          width: 37px;
+          height: 30px;
+        }
+      }
+    }
+  }
+  .checkoutBar {
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    margin-top: 20px;
+    background-color: var(--grey-200);
+
+    .totalLabel {
+      font-size: 20px;
+    }
+
+    .checkoutButton {
+      width: 128px;
+      height: 40px;
+      text-align: center;
+      border-radius: 11px;
+      background-color: var(--blue-500);
+      font-weight: lighter;
+      color: var(--grey-100);
+    }
+  }
+}

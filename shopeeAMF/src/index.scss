@@ -1,0 +1,44 @@
+:root {
+  --blue-100: #f2f5fe;
+  --blue-200: #d9e4ff;
+  --blue-300: #e5ebfc;
+  --blue-500: #004cff;
+
+  --grey-100: #f3f3f3;
+  --grey-200: #f8f8f8;
+  --grey-500: #d2d2d2;
+  --grey-900: #202020;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2 {
+  font-family: "Raleway", sans-serif;
+}
+
+button,
+input,
+textarea,
+select {
+  all: unset;
+}
+
+button {
+  cursor: pointer;
+}
+
+input {
+  width: 100%;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  color: var(--grey-900);
+  background-color: #ffffff;
+}

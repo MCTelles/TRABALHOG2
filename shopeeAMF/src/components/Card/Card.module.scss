@@ -1,0 +1,22 @@
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+
+  img {
+    object-fit: cover;
+    width: 155px;
+    height: 171px;
+    border: 5px solid #fff;
+    border-radius: 9px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .cardTitle {
+    font-size: 12px;
+  }
+
+  h2 {
+    font-size: 17px;
+  }
+}
