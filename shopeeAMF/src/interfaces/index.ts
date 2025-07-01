@@ -9,7 +9,8 @@ export interface IProduct {
 }
 
 export interface IUser {
-  id: string;
+  _id: string;
+  id?: string;
   name: string;
   email: string;
   password: string;
@@ -18,3 +19,16 @@ export interface IUser {
   address?: string;
   phone?: string;
 }
+
+export interface Order {
+  _id: string;
+  userId: string;
+  items: any[];
+  address: string;
+  phone: string;
+  email: string;
+  shippingType: string;
+  total: number;
+  createdAt: string;
+  status: "to_pay" | "to_receive" | "to_review" | "completed";
+};

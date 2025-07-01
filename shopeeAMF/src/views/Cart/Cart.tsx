@@ -16,12 +16,16 @@ function Cart() {
   const [editingAddress, setEditingAddress] = useState(false);
   const [newAddress, setNewAddress] = useState(user.address || "");
 
-  console.log("Salvando endereço para user:", user);
-
   const setSaving = async () => {
+    if (!user?.id) {
+      alert("Usuário não está logado ou ID inválido");
+      return;
+    }
+    const userId = user.id;
+
     try {
       const response = await fetch(
-        `http://localhost:5000/user/address/${user.id}`,
+        `http://localhost:5000/user/address/${userId}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
@@ -74,6 +78,8 @@ function Cart() {
   );
 
   const navigate = useNavigate();
+
+  console.log("Usuário no setSaving:", user);
 
   return (
     <div className={styles.cartContainer}>

@@ -39,13 +39,13 @@ router.post('/', upload.single("photo"), async (req: Request, res: Response) => 
     await newUser.save();
 
     // 🔐 Gerar o token JWT
-    const token = jwt.sign({ id: newUser.id }, process.env.JWT_SECRET!, { expiresIn: "1d" });
+    const token = jwt.sign({ id: newUser._id }, process.env.JWT_SECRET!, { expiresIn: "1d" });
 
     res.status(201).json({
       message: "Usuário criado com sucesso",
       token,
       user: {
-        id: newUser.id,
+        id: newUser._id,
         name: newUser.email.split("@")[0], // Usando o email para gerar um nome de usuário
         email: newUser.email,
         phone: newUser.phone,

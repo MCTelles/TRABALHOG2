@@ -1,4 +1,4 @@
-import { useProducts } from "../../hooks/useProducts";
+import { useOrders } from "../../hooks/useOrders";
 import { useUser } from "../../hooks/useUser";
 import { ImageCarousel } from "../../components/ImageCarousel/ImageCarousel";
 import styles from "./Profile.module.scss";
@@ -21,7 +21,14 @@ import product7 from "/images/product7.jpg";
 
 function Profile() {
   const { haveProductsToPay, haveProductsToReceive, haveProductsToReview } =
-    useProducts();
+    useOrders();
+
+  console.log(
+    "Pedidos no Profile:",
+    haveProductsToPay,
+    haveProductsToReceive,
+    haveProductsToReview
+  );
 
   const { user } = useUser();
 

@@ -54,6 +54,7 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
       // salvar token no localStorage (ou cookies, dependendo do seu fluxo)
       localStorage.setItem("token", data.token);
 
+
       // navega para a página de perfil
       navigate("/profile");
     } catch (error) {

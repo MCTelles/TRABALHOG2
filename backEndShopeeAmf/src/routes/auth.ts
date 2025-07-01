@@ -24,14 +24,14 @@ router.post("/login", async (req: Request, res: Response) => {
       return res.status(401).json({ message: "Credenciais inválidas" });
     }
 
-    const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET!, { expiresIn: "1d" });
+    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET!, { expiresIn: "1d" });
 
     console.log("Login bem-sucedido para o usuário:", email);
     return res.json({
       message: "Login bem-sucedido",
       token,
       user: {
-        id: user.id,
+        id: user._id,
         email: user.email,
         name: user.email.split("@")[0], // Usando o email para gerar um nome de usuário 
         phone: user.phone,
